@@ -1,9 +1,16 @@
 package com.qa.utils;
 
-import com.qa.base.BaseClass;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class TestUtils extends BaseClass{
+public class TestUtils {
+	public static WebDriver driver;
 
-	public static long IMPLICIT_WAIT=10;
+	public void waitForPresent(WebElement element) {
+		WebDriverWait wait = new WebDriverWait(driver, 120);
+		wait.until(ExpectedConditions.visibilityOf(element));
+	}
 
 }

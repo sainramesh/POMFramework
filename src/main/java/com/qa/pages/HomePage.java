@@ -11,19 +11,19 @@ public class HomePage extends BaseClass {
 	@FindBy(css = ".private-header__heading")
 	WebElement successfulLogin;
 
-	@FindBy(css = ".expandable.active #nav-primary-contacts-branch")
+	@FindBy(css = ".expandable #nav-primary-contacts-branch[data-tracking='click hover']")
 	WebElement contactDropdwon;
 
 	@FindBy(css = ".expandable.active #nav-secondary-contacts")
 	WebElement contactLink;
 
-	@FindBy(css = ".expandable.active #nav-primary-sales-branch")
+	@FindBy(css = ".expandable #nav-primary-sales-branch[data-tracking='click hover']")
 	WebElement dealsDropdwon;
 
 	@FindBy(css = ".expandable.active #nav-secondary-deals")
 	WebElement dealsLink;
 
-	@FindBy(css = ".expandable.active #nav-primary-sales-branch")
+	@FindBy(css = ".expandable #nav-primary-sales-branch[data-tracking='click hover']")
 	WebElement tasksDropdwon;
 
 	@FindBy(css = ".expandable.active #nav-secondary-tasks")
@@ -34,30 +34,31 @@ public class HomePage extends BaseClass {
 	}
 
 	public boolean validateSuccessfulLogin() {
-		System.out.println("sssss");
+		waitForPresent(successfulLogin);
 		return successfulLogin.isDisplayed();
 
 	}
 
 	public void clickOnContactLink() {
+		waitForPresent(contactDropdwon);
 		contactDropdwon.click();
-		//driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		contactLink.click();
 
 	}
 
-	public TasksPage clickOnTasksLink() {
+	public void clickOnTasksLink() {
+		waitForPresent(dealsDropdwon);
 		dealsDropdwon.click();
-		//driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		dealsLink.click();
-		return new TasksPage();
+
 	}
 
-	public DealsPage clickOnDealsLink() {
+	public void clickOnDealsLink() throws Exception {
+		waitForPresent(tasksDropdwon);
 		tasksDropdwon.click();
-		//driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+		Thread.sleep(2000);
 		tasksLink.click();
-		return new DealsPage();
+
 	}
 
 }

@@ -1,13 +1,10 @@
 package com.qa.pages;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.qa.base.BaseClass;
-import com.qa.utils.TestUtils;
 
 public class LoginPage extends BaseClass {
 
@@ -34,21 +31,21 @@ public class LoginPage extends BaseClass {
 	// PageActions
 
 	public String validateLoginPageTitle() {
-		driver.manage().timeouts().implicitlyWait(TestUtils.IMPLICIT_WAIT, TimeUnit.SECONDS);
+		waitForPresent(signUpLink);
 		return driver.getTitle();
 
 	}
 
-	public HomePage login(String un, String pwd) {
+	public void login(String un, String pwd) {
+		waitForPresent(username);
 		username.sendKeys(un);
 		password.sendKeys(pwd);
-		driver.manage().timeouts().implicitlyWait(TestUtils.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		loginBtn.click();
-		return new HomePage();
+
 	}
 
 	public String signUpValidate() {
-		driver.manage().timeouts().implicitlyWait(TestUtils.IMPLICIT_WAIT, TimeUnit.SECONDS);
+		waitForPresent(signUpLink);
 		signUpLink.click();
 		return driver.getTitle();
 	}

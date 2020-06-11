@@ -30,7 +30,7 @@ public class LoginPageTest extends BaseClass {
 
 	@Test(priority = 2)
 	public void loginTest() {
-		homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
+		loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 	}
 
 	@Test(priority = 3)

@@ -29,13 +29,13 @@ public class HomePageTest extends BaseClass {
 	public void setUp() {
 		initialization();
 		loginPage = new LoginPage();
-		contactPage = new ConatctPage();
+		homePage= new HomePage();
 		loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 	}
 
-	// @Test(priority = 1)
+	@Test(priority = 1)
 	public void homePageSuccessfulLoginMessage() {
 		Assert.assertTrue(homePage.validateSuccessfulLogin());
 	}
@@ -45,14 +45,14 @@ public class HomePageTest extends BaseClass {
 		homePage.clickOnContactLink();
 	}
 
-	// @Test(priority = 3)
-	public void verifyDealsLink() {
-		dealsPage = homePage.clickOnDealsLink();
+	@Test(priority = 3)
+	public void verifyDealsLink() throws Exception {
+		homePage.clickOnDealsLink();
 	}
 
-	// @Test(priority = 4)
+	@Test(priority = 4)
 	public void verifyTasksLink() {
-		tasksPage = homePage.clickOnTasksLink();
+		homePage.clickOnTasksLink();
 	}
 
 	@AfterMethod

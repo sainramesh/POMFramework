@@ -7,13 +7,17 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.qa.utils.TestUtils;
 
-public class BaseClass {
+public class BaseClass extends TestUtils {
 
-	public static WebDriver driver;
+
 	public static Properties prop;
 
 	public BaseClass() {
@@ -35,8 +39,11 @@ public class BaseClass {
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.get(prop.getProperty("url"));
-		driver.manage().timeouts().implicitlyWait(TestUtils.IMPLICIT_WAIT, TimeUnit.SECONDS);
+
+
 
 	}
+
+
 
 }
