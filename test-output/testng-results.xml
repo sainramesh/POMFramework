@@ -1,61 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="58588" started-at="2020-06-11T10:41:13Z" finished-at="2020-06-11T10:42:12Z">
+  <suite name="Default suite" duration-ms="40864" started-at="2020-06-11T12:25:18Z" finished-at="2020-06-11T12:25:59Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="58588" started-at="2020-06-11T10:41:13Z" finished-at="2020-06-11T10:42:12Z">
-      <class name="com.qa.tests.HomePageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.tests.HomePageTest@77caeb3e]" name="setUp" is-config="true" duration-ms="9184" started-at="2020-06-11T10:41:13Z" finished-at="2020-06-11T10:41:22Z">
+    <test name="Default test" duration-ms="40864" started-at="2020-06-11T12:25:18Z" finished-at="2020-06-11T12:25:59Z">
+      <class name="com.qa.tests.NewContactTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.tests.NewContactTest@77caeb3e]" name="setUp" is-config="true" duration-ms="16706" started-at="2020-06-11T12:25:18Z" finished-at="2020-06-11T12:25:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="homePageSuccessfulLoginMessage()[pri:1, instance:com.qa.tests.HomePageTest@77caeb3e]" name="homePageSuccessfulLoginMessage" duration-ms="3801" started-at="2020-06-11T10:41:22Z" finished-at="2020-06-11T10:41:26Z">
+        <test-method status="PASS" signature="verifyContactLabelTest()[pri:1, instance:com.qa.tests.NewContactTest@77caeb3e]" name="verifyContactLabelTest" duration-ms="145" started-at="2020-06-11T12:25:35Z" finished-at="2020-06-11T12:25:35Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- homePageSuccessfulLoginMessage -->
-        <test-method status="PASS" signature="teadDown()[pri:0, instance:com.qa.tests.HomePageTest@77caeb3e]" name="teadDown" is-config="true" duration-ms="201" started-at="2020-06-11T10:41:26Z" finished-at="2020-06-11T10:41:26Z">
+        </test-method> <!-- verifyContactLabelTest -->
+        <test-method status="PASS" signature="teadDown()[pri:0, instance:com.qa.tests.NewContactTest@77caeb3e]" name="teadDown" is-config="true" duration-ms="181" started-at="2020-06-11T12:25:35Z" finished-at="2020-06-11T12:25:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teadDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.tests.HomePageTest@77caeb3e]" name="setUp" is-config="true" duration-ms="8318" started-at="2020-06-11T10:41:26Z" finished-at="2020-06-11T10:41:35Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.tests.NewContactTest@77caeb3e]" name="setUp" is-config="true" duration-ms="13716" started-at="2020-06-11T12:25:35Z" finished-at="2020-06-11T12:25:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyConatctLink()[pri:2, instance:com.qa.tests.HomePageTest@77caeb3e]" name="verifyConatctLink" duration-ms="4651" started-at="2020-06-11T10:41:35Z" finished-at="2020-06-11T10:41:39Z">
+        <test-method status="PASS" signature="newContactTest()[pri:2, instance:com.qa.tests.NewContactTest@77caeb3e]" name="newContactTest" duration-ms="9839" started-at="2020-06-11T12:25:49Z" finished-at="2020-06-11T12:25:58Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyConatctLink -->
-        <test-method status="PASS" signature="teadDown()[pri:0, instance:com.qa.tests.HomePageTest@77caeb3e]" name="teadDown" is-config="true" duration-ms="197" started-at="2020-06-11T10:41:39Z" finished-at="2020-06-11T10:41:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teadDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.tests.HomePageTest@77caeb3e]" name="setUp" is-config="true" duration-ms="8898" started-at="2020-06-11T10:41:40Z" finished-at="2020-06-11T10:41:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyDealsLink()[pri:3, instance:com.qa.tests.HomePageTest@77caeb3e]" name="verifyDealsLink" duration-ms="8687" started-at="2020-06-11T10:41:48Z" finished-at="2020-06-11T10:41:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyDealsLink -->
-        <test-method status="PASS" signature="teadDown()[pri:0, instance:com.qa.tests.HomePageTest@77caeb3e]" name="teadDown" is-config="true" duration-ms="207" started-at="2020-06-11T10:41:57Z" finished-at="2020-06-11T10:41:57Z">
+        </test-method> <!-- newContactTest -->
+        <test-method status="PASS" signature="teadDown()[pri:0, instance:com.qa.tests.NewContactTest@77caeb3e]" name="teadDown" is-config="true" duration-ms="220" started-at="2020-06-11T12:25:58Z" finished-at="2020-06-11T12:25:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teadDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.tests.HomePageTest@77caeb3e]" name="setUp" is-config="true" duration-ms="8491" started-at="2020-06-11T10:41:57Z" finished-at="2020-06-11T10:42:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyTasksLink()[pri:4, instance:com.qa.tests.HomePageTest@77caeb3e]" name="verifyTasksLink" duration-ms="5680" started-at="2020-06-11T10:42:06Z" finished-at="2020-06-11T10:42:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTasksLink -->
-        <test-method status="PASS" signature="teadDown()[pri:0, instance:com.qa.tests.HomePageTest@77caeb3e]" name="teadDown" is-config="true" duration-ms="190" started-at="2020-06-11T10:42:12Z" finished-at="2020-06-11T10:42:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teadDown -->
-      </class> <!-- com.qa.tests.HomePageTest -->
+      </class> <!-- com.qa.tests.NewContactTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
