@@ -38,6 +38,7 @@ public class HomePageTest extends BaseClass {
 	@Test(priority = 1)
 	public void homePageSuccessfulLoginMessage() {
 		Assert.assertTrue(homePage.validateSuccessfulLogin());
+		System.out.println("success");
 	}
 
 	@Test(priority = 2)
