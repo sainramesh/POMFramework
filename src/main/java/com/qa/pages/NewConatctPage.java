@@ -26,8 +26,11 @@ public class NewConatctPage extends BaseClass {
 	@FindBy(css = ".p-bottom-1 [data-button-use=primary]")
 	WebElement createContactBtn;
 
-	@FindBy(css=".private-alert__inner")
+	@FindBy(css = ".private-icon .gtXcdl")
 	WebElement succfulContactMesssage;
+
+	@FindBy(css = "#uiabstractdropdown-button-54[data-dropdown-open='false']")
+	WebElement lifieCycleStage;
 
 	public NewConatctPage() {
 		PageFactory.initElements(driver, this);
@@ -40,13 +43,17 @@ public class NewConatctPage extends BaseClass {
 		return contactsLabel.isDisplayed();
 	}
 
-	public void createContact() {
+	public void createContact(String emailid, String fn, String ln, String stage) throws Exception {
 		waitForPresent(createContactLink);
 		createContactLink.click();
 		waitForPresent(createContactBtn);
-		contactEmail.sendKeys("test2@test.com");
-		contactFName.sendKeys("div");
-		contactLName.sendKeys("test");
+		contactEmail.sendKeys(emailid);
+		contactFName.sendKeys(fn);
+		contactLName.sendKeys(ln);
+		waitForPresent(lifieCycleStage);
+		lifieCycleStage.click();
+		Thread.sleep(2000);
+		selectFromDropdown(stage);
 		waitForPresent(createContactBtn);
 		createContactBtn.click();
 		waitForPresent(succfulContactMesssage);
