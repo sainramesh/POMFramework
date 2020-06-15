@@ -47,17 +47,17 @@ public class HomePage extends BaseClass {
 	}
 
 	public void clickOnTasksLink() {
-		waitForPresent(dealsDropdwon);
-		dealsDropdwon.click();
-		dealsLink.click();
+		waitForPresent(tasksDropdwon);
+		tasksDropdwon.click();
+		tasksLink.click();
 
 	}
 
 	public void clickOnDealsLink() throws Exception {
-		waitForPresent(tasksDropdwon);
-		tasksDropdwon.click();
+		waitForPresent(dealsDropdwon);
+		dealsDropdwon.click();
 		Thread.sleep(2000);
-		tasksLink.click();
+		dealsLink.click();
 
 	}
 

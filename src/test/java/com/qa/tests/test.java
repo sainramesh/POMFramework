@@ -14,9 +14,9 @@ import com.qa.base.BaseClass;
 
 public class test extends BaseClass {
 
-
 	public static WebDriver driver;
-@Test
+
+	@Test
 	public static void initialization() {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
@@ -29,7 +29,8 @@ public class test extends BaseClass {
 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-		driver.findElement(By.cssSelector(".expandable #nav-primary-contacts-branch[data-tracking='click hover")).click();
+		driver.findElement(By.cssSelector(".expandable #nav-primary-contacts-branch[data-tracking='click hover"))
+				.click();
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
@@ -38,6 +39,7 @@ public class test extends BaseClass {
 		}
 		driver.findElement(By.cssSelector(".expandable.active #nav-secondary-contacts")).click();
 		driver.findElement(By.cssSelector(".add-control button")).click();
+
 		driver.findElement(By.cssSelector(".private-form__control[data-field=email]")).sendKeys("test@testg.com");
 		try {
 			Thread.sleep(2000);
@@ -45,26 +47,26 @@ public class test extends BaseClass {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		driver.findElement(By.cssSelector("#uiabstractdropdown-button-54[data-dropdown-open='false']")).click();
+		WebElement element = driver.findElement(By.cssSelector("a[href='/sales-products-settings/7876320/contacts']"));
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView();", element);
+		driver.findElement(By.cssSelector("[data-selenium-test=property-input-hs_lead_status]")).click();
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		 js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-		List<WebElement> listItem = driver.findElements(By.cssSelector(".uiTypeaheadResults__item[title='Other']']"));
-		System.out.println(listItem);
+
+		List<WebElement> listItem = driver.findElements(By.cssSelector(".Select-option button"));
+		System.out.println("itesms are " + listItem.size());
 		for (WebElement stageList : listItem) {
-			if (stageList.getText().equalsIgnoreCase("Subscriber")) {
+			if (stageList.getAttribute("title").equalsIgnoreCase("New")) {
 				stageList.click();
 			}
+			System.out.println(stageList);
 		}
 
-
-
 	}
-
 
 }

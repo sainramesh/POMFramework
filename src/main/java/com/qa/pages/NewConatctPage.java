@@ -1,5 +1,6 @@
 package com.qa.pages;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -32,6 +33,15 @@ public class NewConatctPage extends BaseClass {
 	@FindBy(css = "#uiabstractdropdown-button-54[data-dropdown-open='false']")
 	WebElement lifieCycleStage;
 
+	@FindBy(css="[data-selenium-test='property-input-lifecyclestage']")
+	WebElement stageDropdownLink;
+
+	@FindBy(css="[data-selenium-test='property-input-hs_lead_status']")
+	WebElement leadStatusDropdownLink;
+
+	@FindBy(css="a[href='/sales-products-settings/7876320/contacts']")
+	WebElement PageLinks;
+
 	public NewConatctPage() {
 		PageFactory.initElements(driver, this);
 	}
@@ -43,18 +53,22 @@ public class NewConatctPage extends BaseClass {
 		return contactsLabel.isDisplayed();
 	}
 
-	public void createContact(String emailid, String fn, String ln, String stage) throws Exception {
+	public void createContact(String emailid, String fn, String ln, String stage, String leadvalue) throws Exception {
 		waitForPresent(createContactLink);
 		createContactLink.click();
 		waitForPresent(createContactBtn);
 		contactEmail.sendKeys(emailid);
 		contactFName.sendKeys(fn);
 		contactLName.sendKeys(ln);
-		waitForPresent(lifieCycleStage);
-		lifieCycleStage.click();
+		scrollDown(PageLinks);
+		stageDropdownLink.sendKeys(stage);
 		Thread.sleep(2000);
-		selectFromDropdown(stage);
-		waitForPresent(createContactBtn);
+		stageDropdownLink.sendKeys(Keys.ENTER);
+		Thread.sleep(5000);
+		leadStatusDropdownLink.sendKeys(leadvalue);
+		Thread.sleep(2000);
+		leadStatusDropdownLink.sendKeys(Keys.ENTER);
+		Thread.sleep(5000);
 		createContactBtn.click();
 		waitForPresent(succfulContactMesssage);
 
