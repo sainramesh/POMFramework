@@ -21,6 +21,7 @@ public class HomePageTest extends BaseClass {
 	DealsPage dealsPage;
 	TasksPage tasksPage;
 
+
 	public HomePageTest() {
 		super();
 	}
@@ -35,24 +36,27 @@ public class HomePageTest extends BaseClass {
 
 	}
 
-	@Test(priority = 1)
+	@Test
 	public void homePageSuccessfulLoginMessage() {
 		Assert.assertTrue(homePage.validateSuccessfulLogin());
 		System.out.println("success");
 	}
 
-	@Test(priority = 2)
+	@Test
 	public void verifyConatctLink() {
+	//	logger= extent.createTest("verifyConatctLink");
 		homePage.clickOnContactLink();
 	}
 
-	@Test(priority = 3)
+	@Test
 	public void verifyDealsLink() throws Exception {
+		//logger= extent.createTest("verifyDealsLink");
 		homePage.clickOnDealsLink();
 	}
 
-	@Test(priority = 4)
+	@Test
 	public void verifyTasksLink() {
+	//	logger= extent.createTest("verifyTasksLink");
 		homePage.clickOnTasksLink();
 	}
 

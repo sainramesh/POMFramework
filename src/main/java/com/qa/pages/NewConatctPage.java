@@ -24,6 +24,12 @@ public class NewConatctPage extends BaseClass {
 	@FindBy(css = ".private-form__control[data-field=lastname]")
 	WebElement contactLName;
 
+	@FindBy(css = ".private-form__control[data-field=phone]")
+	WebElement contactNumber;
+
+	@FindBy(css = ".private-form__control[data-field=jobtitle]")
+	WebElement contactJobTitle;
+
 	@FindBy(css = ".p-bottom-1 [data-button-use=primary]")
 	WebElement createContactBtn;
 
@@ -53,25 +59,26 @@ public class NewConatctPage extends BaseClass {
 		return contactsLabel.isDisplayed();
 	}
 
-	public void createContact(String emailid, String fn, String ln, String stage, String leadvalue) throws Exception {
+	public void createContact(String emailid, String fn, String ln, String stage, String leadvalue, String title, String phone) throws Exception {
 		waitForPresent(createContactLink);
 		createContactLink.click();
 		waitForPresent(createContactBtn);
 		contactEmail.sendKeys(emailid);
 		contactFName.sendKeys(fn);
 		contactLName.sendKeys(ln);
+		contactJobTitle.sendKeys(title);
+		contactNumber.sendKeys(phone);
 		scrollDown(PageLinks);
-		stageDropdownLink.sendKeys(stage);
+		stageDropdownLink.click();
+		selectFromDropdown(stage);
+		leadStatusDropdownLink.click();
+		selectFromDropdown(leadvalue);
 		Thread.sleep(2000);
-		stageDropdownLink.sendKeys(Keys.ENTER);
-		Thread.sleep(5000);
-		leadStatusDropdownLink.sendKeys(leadvalue);
-		Thread.sleep(2000);
-		leadStatusDropdownLink.sendKeys(Keys.ENTER);
-		Thread.sleep(5000);
 		createContactBtn.click();
 		waitForPresent(succfulContactMesssage);
 
 	}
+
+
 
 }

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Practice Suite">
+
+	<listeners>
+		<listener
+			class-name="com.qa.ExtentReportListener.ExtentReporterNG" />
+	</listeners>
+
+	<test name="CRMTest">
+		<!-- <packages>
+			<package name="com.qa.tests.*" />
+		</packages> -->
+
+		<classes>
+		<class name="com.qa.tests.NewTaskTest" />
+		</classes>
+
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
+
+
+

@@ -22,18 +22,18 @@ public class LoginPageTest extends BaseClass {
 		loginPage = new LoginPage();
 	}
 
-	@Test(priority = 1)
+	@Test
 	public void loginPageTitle() {
 		String title = loginPage.validateLoginPageTitle();
 		// Assert.assertEquals(title, "");
 	}
 
-	@Test(priority = 2)
+	@Test
 	public void loginTest() {
 		loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 	}
 
-	@Test(priority = 3)
+	@Test
 	public void signUp() {
 		loginPage.signUpValidate();
 	}

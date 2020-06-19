@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Practice Suite]">
+  <test thread-count="5" verbose="0" name="CRMTest(failed)">
+    <classes>
+      <class name="com.qa.tests.NewDealTest">
+        <methods>
+          <include name="teadDown"/>
+          <include name="newDealTest" invocation-numbers="0"/>
+          <include name="verifyDealsLabel"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.qa.tests.NewDealTest -->
+    </classes>
+  </test> <!-- CRMTest(failed) -->
+</suite> <!-- Failed suite [Practice Suite] -->

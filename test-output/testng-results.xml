@@ -2,76 +2,27 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="34381" started-at="2020-06-15T07:56:23Z" finished-at="2020-06-15T07:56:57Z">
+  <suite name="Practice Suite" duration-ms="43207" started-at="2020-06-18T09:21:09Z" finished-at="2020-06-18T09:21:52Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="34381" started-at="2020-06-15T07:56:23Z" finished-at="2020-06-15T07:56:57Z">
-      <class name="com.qa.tests.NewDealTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.tests.NewDealTest@ff5b51f]" name="setUp" is-config="true" duration-ms="18868" started-at="2020-06-15T07:56:23Z" finished-at="2020-06-15T07:56:42Z">
+    <test name="CRMTest" duration-ms="43207" started-at="2020-06-18T09:21:09Z" finished-at="2020-06-18T09:21:52Z">
+      <class name="com.qa.tests.NewTaskTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.tests.NewTaskTest@cb644e]" name="setUp" is-config="true" duration-ms="12475" started-at="2020-06-18T09:21:09Z" finished-at="2020-06-18T09:21:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="newContactTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.qa.tests.NewDealTest@ff5b51f]" name="newContactTest" duration-ms="14504" started-at="2020-06-15T07:56:42Z" data-provider="getDealsData" finished-at="2020-06-15T07:56:57Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Test]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[01-Jun-2020]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[25.0]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[20.0]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method status="FAIL" signature="verifyTasksLabel()[pri:0, instance:com.qa.tests.NewTaskTest@cb644e]" name="verifyTasksLabel" duration-ms="30531" started-at="2020-06-18T09:21:21Z" finished-at="2020-06-18T09:21:52Z">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":".Heading-sc-9dtc71-0.AbstractMonth__Heading-abxtfe-2"}
-  (Session info: chrome=83.0.4103.97)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'RAMESHs-MacBook-Air.local', ip: 'fe80:0:0:0:1c3f:8340:be93:2d47%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.5', java.version: '1.8.0_201'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /var/folders/9h/3h_r8m5j1qq...}, goog:chromeOptions: {debuggerAddress: localhost:61092}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 0e2429fac746540144c811e13f28d287
-*** Element info: {Using=css selector, value=.Heading-sc-9dtc71-0.AbstractMonth__Heading-abxtfe-2}]]>
+              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: .form-control[aria-autocomplete="list"]' (tried for 30 second(s) with 500 milliseconds interval)]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".Heading-sc-9dtc71-0.AbstractMonth__Heading-abxtfe-2"}
-  (Session info: chrome=83.0.4103.97)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'RAMESHs-MacBook-Air.local', ip: 'fe80:0:0:0:1c3f:8340:be93:2d47%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.5', java.version: '1.8.0_201'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /var/folders/9h/3h_r8m5j1qq...}, goog:chromeOptions: {debuggerAddress: localhost:61092}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 0e2429fac746540144c811e13f28d287
-*** Element info: {Using=css selector, value=.Heading-sc-9dtc71-0.AbstractMonth__Heading-abxtfe-2}
-at sun.reflect.GeneratedConstructorAccessor18.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
-at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at com.qa.utils.TestUtils.dateSelectFromCalender(TestUtils.java:129)
-at com.qa.pages.NewDealPage.createDeal(NewDealPage.java:51)
-at com.qa.tests.NewDealTest.newContactTest(NewDealTest.java:50)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: .form-control[aria-autocomplete="list"]' (tried for 30 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at com.qa.utils.TestUtils.waitForPresent(TestUtils.java:41)
+at com.qa.pages.NewTaskPage.validateTasksLabel(NewTaskPage.java:75)
+at com.qa.tests.NewTaskTest.verifyTasksLabel(NewTaskTest.java:37)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -97,17 +48,48 @@ at org.testng.TestNG.run(TestNG.java:1017)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".form-control[aria-autocomplete="list"]"}
+  (Session info: chrome=83.0.4103.106)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'RAMESHs-MacBook-Air.local', ip: 'fe80:0:0:0:108d:fd27:96bd:ee14%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.5', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /var/folders/9h/3h_r8m5j1qq...}, goog:chromeOptions: {debuggerAddress: localhost:61039}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 772704e61dc75a7dd8d65f174b59231b
+*** Element info: {Using=css selector, value=.form-control[aria-autocomplete="list"]}
+at sun.reflect.GeneratedConstructorAccessor16.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
+at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at com.sun.proxy.$Proxy10.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+... 28 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- newContactTest -->
-        <test-method status="PASS" signature="teadDown()[pri:0, instance:com.qa.tests.NewDealTest@ff5b51f]" name="teadDown" is-config="true" duration-ms="250" started-at="2020-06-15T07:56:57Z" finished-at="2020-06-15T07:56:57Z">
+        </test-method> <!-- verifyTasksLabel -->
+        <test-method status="PASS" signature="teadDown()[pri:0, instance:com.qa.tests.NewTaskTest@cb644e]" name="teadDown" is-config="true" duration-ms="169" started-at="2020-06-18T09:21:52Z" finished-at="2020-06-18T09:21:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teadDown -->
-      </class> <!-- com.qa.tests.NewDealTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.qa.tests.NewTaskTest -->
+    </test> <!-- CRMTest -->
+  </suite> <!-- Practice Suite -->
 </testng-results>

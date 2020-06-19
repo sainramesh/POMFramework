@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.tests.NewDealTest">
+      <class name="com.qa.tests.NewTaskTest">
         <methods>
-          <include name="teadDown"/>
+          <include name="newTaskTest" invocation-numbers="0"/>
           <include name="setUp"/>
-          <include name="newContactTest" invocation-numbers="0"/>
+          <include name="teadDown"/>
         </methods>
-      </class> <!-- com.qa.tests.NewDealTest -->
+      </class> <!-- com.qa.tests.NewTaskTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

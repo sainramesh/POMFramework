@@ -32,7 +32,7 @@ public class NewContactTest extends BaseClass {
 
 	}
 
-	@Test(priority = 1)
+	@Test
 	public void verifyContactLabelTest() throws Exception {
 		Assert.assertTrue(newContactPage.validateConatctLabel());
 		takeScreenShot("contactLabel");
@@ -44,9 +44,9 @@ public class NewContactTest extends BaseClass {
 		return data;
 	}
 
-	@Test(dataProvider = "getContactData", priority = 2)
-	public void newContactTest(String Email, String FirstName, String LastName, String StageName, String LeadStatus) throws Exception {
-		newContactPage.createContact(Email, FirstName, LastName, StageName, LeadStatus);
+	@Test(dataProvider = "getContactData")
+	public void newContactTest(String Email, String FirstName, String LastName, String StageName, String LeadStatus, String PhoneNumber, String JobTitle) throws Exception {
+newContactPage.createContact(Email, FirstName, LastName, StageName, LeadStatus, JobTitle, PhoneNumber);
 		takeScreenShot("createContact");
 	}
 

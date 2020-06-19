@@ -9,7 +9,6 @@ import org.testng.annotations.Test;
 import com.qa.base.BaseClass;
 import com.qa.pages.HomePage;
 import com.qa.pages.LoginPage;
-import com.qa.pages.NewConatctPage;
 import com.qa.pages.NewDealPage;
 import com.qa.utils.TestUtils;
 
@@ -33,7 +32,7 @@ public class NewDealTest extends BaseClass {
 
 	}
 
-	//@Test(priority = 1)
+	@Test
 	public void verifyDealsLabel() throws Exception {
 		Assert.assertTrue(newDealPage.validateDealsLabel());
 		takeScreenShot("dealLabel");
@@ -45,9 +44,9 @@ public class NewDealTest extends BaseClass {
 		return data;
 	}
 
-	@Test(dataProvider = "getDealsData", priority = 2)
-	public void newContactTest(String DealName, String DealMonth, String DealDay, String DealAmount) throws Exception {
-		newDealPage.createDeal(DealName, DealMonth, DealDay, DealAmount);
+	@Test(dataProvider = "getDealsData")
+	public void newDealTest(String DealName, String DealAmount, String DealStage, String DealType, String DealCompany, String DealConatct) throws Exception {
+		newDealPage.createDeal(DealName, DealAmount, DealStage, DealType, DealCompany, DealConatct);
 		takeScreenShot("NewDeal");
 	}
 

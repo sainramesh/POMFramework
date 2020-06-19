@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -13,12 +14,12 @@ import org.testng.annotations.Test;
 import com.qa.base.BaseClass;
 
 public class testDeal extends BaseClass {
-	static String Month = "June 2020";
-	static String Day = "30";
+	static String Month = "July 2020";
+	static String Day = "19";
 
 	public static WebDriver driver;
 
-	@Test
+	//@Test
 	public static void initialization() {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
@@ -65,17 +66,80 @@ public class testDeal extends BaseClass {
 
 		driver.findElement(By.cssSelector(".private-form__control[data-field=amount]")).sendKeys("aass");
 
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e1) {
+
+			e1.printStackTrace();
+		}
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView();",
+				driver.findElement(By.cssSelector("a[href='/sales-products-settings/7876320/deals']")));
+
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e1) {
+
+			e1.printStackTrace();
+		}
+
+		driver.findElement(By.cssSelector("[data-selenium-test=\"property-input-dealtype\"]")).click();
+		List<WebElement> listItem5 = driver.findElements(By.cssSelector(".private-typeahead-result-label"));
+		System.out.println("itesms are " + listItem5.size());
+		for (WebElement stageList : listItem5) {
+			if (stageList.getText().equalsIgnoreCase("New Business")) {
+				stageList.click();
+				break;
+			}
+
+		}
+
 		driver.findElement(By.cssSelector("[data-selenium-test=property-input-dealstage]")).click();
 		try {
 			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
+		} catch (InterruptedException e1) {
+
+			e1.printStackTrace();
 		}
+
+
 		List<WebElement> listItem = driver.findElements(By.cssSelector(".private-typeahead-result-label"));
 		System.out.println("itesms are " + listItem.size());
 		for (WebElement stageList : listItem) {
 			if (stageList.getText().equalsIgnoreCase("Qualified to buy")) {
 				stageList.click();
+				break;
+			}
+
+		}
+
+		driver.findElement(By.cssSelector("[data-selenium-test=association-select-COMPANY]")).click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		driver.findElement(By.cssSelector(".form-control[aria-autocomplete=\"list\"]")).sendKeys("te");
+		List<WebElement> listItem1 = driver
+				.findElements(By.cssSelector(".uiTypeaheadResults__item .private-dropdown__item__label"));
+		System.out.println("itesms are " + listItem1.size());
+		for (WebElement companyList : listItem1) {
+			if (companyList.getText().equalsIgnoreCase("ffd9g.com")) {
+				companyList.click();
+				break;
+			}
+
+		}
+
+		driver.findElement(By.cssSelector(".Select-control input")).sendKeys("Khanna");
+		List<WebElement> listItem2 = driver
+				.findElements(By.cssSelector(".uiTypeaheadResults__item .private-dropdown__item__label"));
+		System.out.println("itesms are " + listItem2.size());
+		for (WebElement contactList : listItem2) {
+			if (contactList.getText().equalsIgnoreCase("Raj Khanna (abcd1@abc.com)")) {
+				contactList.click();
+				break;
 			}
 
 		}

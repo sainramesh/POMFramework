@@ -16,7 +16,7 @@ public class test extends BaseClass {
 
 	public static WebDriver driver;
 
-	@Test
+	//@Test
 	public static void initialization() {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
